@@ -58,6 +58,10 @@ ul li, ol li {
   list-style: none;
 }
 
+.whiteText {
+  color:white;
+}
+
 .section-title-header p {
   text: center;
   font-weight: 400;
@@ -117,15 +121,15 @@ ul li, ol li {
 }
 
 .btn-border {
-  color: #137ED9;
+  color: rgb(49, 245, 66);
   background-color: transparent;
-  border: 1px solid #137ED9;
+  border: 2px solid rgb(49, 245, 66);
 }
 
 .btn-border:hover {
   color: #fff;
-  border-color: #137ED9;
-  background-color: #137ED9;
+  border-color: rgb(49, 245, 66);
+  background-color: rgb(49, 245, 66);
 }
 
 .btn-border:focus {
@@ -457,7 +461,7 @@ hr {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  color: #585b60;
+  color: white;
   font-weight: 400;
   padding: 8px 17px;
   margin-top: 15px;
@@ -678,10 +682,12 @@ hr {
 3. Hero Area
 ========================================================================== */
 #hero-area {
-  color: #fff;
+  color: rgb(255, 255, 255);
   overflow: hidden;
-  position: relative;
-  background: #f8f9fb;
+  height: 100vh;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-image: url('../images/hero-1.png');
 }
 
 #hero-area .contents {
@@ -693,7 +699,8 @@ hr {
 }
 
 #hero-area .contents .head-title {
-  color: #585b60;
+  /* color: #585b60; */
+  color: white;
   font-size: 34px;
   line-height: 48px;
   font-weight: 700;
