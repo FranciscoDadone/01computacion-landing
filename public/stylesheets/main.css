@@ -418,6 +418,7 @@ hr {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   background: #fff !important;
+  background-color: rgba(34, 34, 34, 0.966) !important;
 }
 
 .top-nav-collapse .navbar-brand {
@@ -429,7 +430,7 @@ hr {
 }
 
 .top-nav-collapse .navbar-nav .nav-link {
-  color: #585b60 !important;
+  color: #ffffff !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
@@ -688,6 +689,7 @@ hr {
   background-color: black;
   background-repeat: no-repeat;
   background-image: url('../images/hero-1.png');
+  background-size: cover;
 }
 
 #hero-area .contents {
