@@ -383,7 +383,7 @@
         <div class="col-md-7 col-lg-6 col-sm-12">
           <div class="contact-block">
           <h2>Formulario de contacto</h2>
-          <form action="/contact" method="post" id="contactForm">
+          <form method="post" action="/contact" id="contactForm">
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
@@ -399,13 +399,13 @@
           </div>
           <div class="col-md-12">
             <div class="form-group">
-            <input type="text" placeholder="Asunto" id="msg_subject" class="form-control" required="" data-error="Por favor ingresa el asunto">
+            <input type="text" placeholder="Asunto" id="subject" name="subject" class="form-control" required="" data-error="Por favor ingresa el asunto">
             <div class="help-block with-errors"></div>
           </div>
         </div>
         <div class="col-md-12">
           <div class="form-group">
-          <textarea class="form-control" id="message" placeholder="Mensaje" rows="5" data-error="Write your message" required=""></textarea>
+          <textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="5" data-error="Write your message" required=""></textarea>
           <div class="help-block with-errors"></div>
         </div>
         <div class="submit-button">
