@@ -382,8 +382,9 @@
         <div class="row contact-form-area wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
         <div class="col-md-7 col-lg-6 col-sm-12">
           <div class="contact-block">
+          <div id="form-notification"></div>
           <h2>Formulario de contacto</h2>
-          <form method="post" action="/contact" id="contactForm">
+          <form id="contactForm" method="post">
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
@@ -393,11 +394,11 @@
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-              <input type="text" placeholder="Email" id="email" class="form-control" name="email" required="" data-error="Por favor ingresa tu email">
+              <input type="text" placeholder="Email o Tel." id="email" class="form-control" name="email" required="" data-error="Por favor ingresa tu email o tu número de telefono.">
               <div class="help-block with-errors"></div>
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-lg-12">
             <div class="form-group">
             <input type="text" placeholder="Asunto" id="subject" name="subject" class="form-control" required="" data-error="Por favor ingresa el asunto">
             <div class="help-block with-errors"></div>
@@ -536,6 +537,8 @@
     <script src="javascripts/jquery.easing.min.js"></script>
     <script src="javascripts/jquery.slicknav.js"></script>
     <script src="javascripts/main.js"></script>
+    <script src="javascripts/form-submition.js"></script>
+    <script src="javascripts/bootsalert.min.js"></script>
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/d60acf7f79.js" crossorigin="anonymous"></script>
   </body>

@@ -1,0 +1,120 @@
+<%
+
+function singlelineToMultiline(str) {
+	var newstr = "";
+	var arr = [];
+	var count = 0;
+	for(var i = 0; i < str.length; i++) {
+		newstr += str[i];
+		if(!((i+1) % 70)) {
+			arr.push(newstr);
+			newstr = "";
+			count++;
+		} else if(i == str.length - 1) arr.push(newstr);
+	}
+	return arr;
+}
+
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01Computación - Admin</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 0;
+            margin: 0;
+            white-space:inherit;
+        }
+    </style>
+</head>
+<body>
+
+
+    <center>
+        <% 
+        if(data.status != 200) {
+        %>
+        <div>
+            <h1>
+                Admin login
+            </h1>
+            <form action="adminLogin" method="post" id="form">
+                <p>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </p>
+                <p>
+                    <input type="text" name="password" id="password" placeholder="Password">
+                </p>
+                <p>
+                    <button type="submit">
+                        Login
+                    </button>
+                </p>
+            </form>
+        </div>
+        <% } else { %>
+        
+    
+        <div>
+        
+            <h1>
+                Lista de mensajes:
+            </h1>
+
+            <table style="width: 100%;">
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Email / Tel.
+                    </th>
+                    <th style="width: 65%;">
+                        Mensaje    
+                    </th>
+                </tr>
+                <% for(var i = 0; i < data.db.length; i++) { %>
+                <tr>
+                    <th>
+                        <%= data.db[i].id %>
+                    </th>
+                    <th>
+                        <%= data.db[i].name %>
+                    </th>
+                    <th>
+                        <%= data.db[i].email %>
+                    </th>
+                    <td style="width: 65%;">
+                        %>
+                        <%
+
+                        if(data.db[i].message != null) {
+                            var message = singlelineToMultiline(data.db[i].message);
+                            message.forEach(element => {
+                                %>
+                                <%- element %>
+                                <%
+                            });
+                        } 
+                        %>
+                        
+                    </td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+        <% } %>
+    </center>
+    <script src="javascripts/jquery-min.js"></script>
+    <script src="javascripts/adminLogin.js"></script>
+</body>
+</html>
