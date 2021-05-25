@@ -96,17 +96,25 @@ function singlelineToMultiline(str) {
                     <td style="width: 65%;">
                         %>
                         <%
-
                         if(data.db[i].message != null) {
                             var message = singlelineToMultiline(data.db[i].message);
                             message.forEach(element => {
-                                %>
+                        %>
                                 <%- element %>
                                 <%
                             });
                         } 
                         %>
                         
+                    </td>
+                    <td>
+                        <form action="/adminDeleteMessage" method="post">
+                            <input type="hidden" name="id" value=<%- data.db[i].id %> >
+                            <input type="hidden" name="token" value=<%- token %> >
+                            <button type="submit" style="width:100%; background-color: red;">
+                                <i class="fas fa-trash-alt" style="color: white;"></i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
                 <% } %>
@@ -115,6 +123,6 @@ function singlelineToMultiline(str) {
         <% } %>
     </center>
     <script src="javascripts/jquery-min.js"></script>
-    <script src="javascripts/adminLogin.js"></script>
+    <script src="https://kit.fontawesome.com/d60acf7f79.js" crossorigin="anonymous"></script>
 </body>
 </html>

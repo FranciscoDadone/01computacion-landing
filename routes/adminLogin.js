@@ -1,4 +1,5 @@
 var express = require('express');
+const md5 = require('md5');
 var router = express.Router();
 var credentials = require('../keys/adminKeys');
 
@@ -20,7 +21,8 @@ router.post('/', function(req, res, next) {
             if (err) throw err;
             send["db"] = rows;
 
-            res.render('admin', { data: send });
+            res.render('admin', { data: send,
+                                  token: md5(username + password) });
         });
         
     } else {

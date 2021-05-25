@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
 var contactRouter = require('./routes/contact');
 var adminLoginRouter = require('./routes/adminLogin');
+var adminDeleteRouter = require('./routes/adminDeleteMessage');
+var auth = require('./middlewares/auth/auth');
 
 
 var app = express();
@@ -26,6 +28,8 @@ app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/contact', contactRouter);
 app.use('/adminLogin', adminLoginRouter);
+app.use('/adminDeleteMessage', auth, adminDeleteRouter);
+
 
 
 // catch 404 and forward to error handler
