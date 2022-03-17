@@ -38,7 +38,7 @@ Page in production: [www.01computacion.com](www.01computacion.com)
 * Sqlite3 requires Python to work, so prior to installing the node modules (```npm i```), install Python.
 
 ### Installation
-
+#### Regular install
 1. Clone the repo.
    ```sh
    git clone https://github.com/FranciscoDadone/01computacion-landing
@@ -49,6 +49,12 @@ Page in production: [www.01computacion.com](www.01computacion.com)
    ```
 3. Change the admin panel default credentials under ```./keys/adminKeys.js```
 
+### Docker install
+1. Build the image
+```$ docker build . -t 01computacion-landing```
+
+2. Running the image
+```$ docker run -d -p <PORT>:3000 01computacion-landing```
 
 
 <!-- USAGE EXAMPLES -->
