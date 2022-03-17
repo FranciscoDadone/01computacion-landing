@@ -35,6 +35,8 @@ Page in production: [www.01computacion.com](www.01computacion.com)
   npm install pm2 -g
   ```
 
+* Sqlite3 requires Python to work, so prior to installing the node modules (```npm i```), install Python.
+
 ### Installation
 
 1. Clone the repo.
