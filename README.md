@@ -54,7 +54,7 @@ Page in production: [www.01computacion.com](www.01computacion.com)
 ```$ docker build . -t 01computacion-landing```
 
 2. Running the image
-```$ docker run -d -p <PORT>:3000 01computacion-landing```
+```$ docker run -d -p <PORT>:3000 --restart unless-stopped 01computacion-landing```
 
 
 <!-- USAGE EXAMPLES -->
